@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net45</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>LoveCharmBabyMod</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="StardewModdingAPI">
+      <HintPath>$(SolutionDir)SMAPI\StardewModdingAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Stardew Valley">
+      <HintPath>$(SolutionDir)SMAPI\Stardew Valley.exe</HintPath>
+    </Reference>
+    <Reference Include="Harmony">
+      <HintPath>$(SolutionDir)SMAPI\Harmony.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
