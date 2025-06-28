@@ -8,13 +8,13 @@
 
   <ItemGroup>
   <Reference Include="StardewModdingAPI">
-    <HintPath>lib\StardewModdingAPI.dll</HintPath>
+    <HintPath>lib/StardewModdingAPI.dll</HintPath>
   </Reference>
   <Reference Include="Stardew Valley">
-    <HintPath>lib\Stardew Valley.dll</HintPath>
+    <HintPath>lib/Stardew Valley.dll</HintPath>
   </Reference>
   <Reference Include="Harmony">
-    <HintPath>lib\Harmony.dll</HintPath>
+    <HintPath>lib/Harmony.dll</HintPath>
   </Reference>
 </ItemGroup>
 
