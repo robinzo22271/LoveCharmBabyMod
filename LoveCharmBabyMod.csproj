@@ -7,15 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="StardewModdingAPI">
-      <HintPath>$(SolutionDir)SMAPI\StardewModdingAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="Stardew Valley">
-      <HintPath>$(SolutionDir)SMAPI\Stardew Valley.exe</HintPath>
-    </Reference>
-    <Reference Include="Harmony">
-      <HintPath>$(SolutionDir)SMAPI\Harmony.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+  <Reference Include="StardewModdingAPI">
+    <HintPath>lib\StardewModdingAPI.dll</HintPath>
+  </Reference>
+  <Reference Include="Stardew Valley">
+    <HintPath>lib\Stardew Valley.dll</HintPath>
+  </Reference>
+  <Reference Include="Harmony">
+    <HintPath>lib\Harmony.dll</HintPath>
+  </Reference>
+</ItemGroup>
 
 </Project>
