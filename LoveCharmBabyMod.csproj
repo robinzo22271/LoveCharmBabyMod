@@ -6,7 +6,7 @@
     <AssemblyName>LoveCharmBabyMod</AssemblyName>
   </PropertyGroup>
 
-  <ItemGroup>
+<ItemGroup>
   <Reference Include="StardewModdingAPI">
     <HintPath>lib/StardewModdingAPI.dll</HintPath>
   </Reference>
