@@ -1,4 +1,4 @@
- <Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
@@ -8,15 +8,15 @@
 
   <ItemGroup>
     <Reference Include="StardewModdingAPI">
-      <HintPath>lib\StardewModdingAPI.dll</HintPath>
+      <HintPath>..\lib\StardewModdingAPI.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="StardewValley">
-      <HintPath>lib\StardewValley.dll</HintPath>
+      <HintPath>..\lib\StardewValley.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="HarmonyLib">
-      <HintPath>lib\Harmony.dll</HintPath>
+      <HintPath>..\lib\Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
