@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+ <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
@@ -6,16 +6,19 @@
     <AssemblyName>LoveCharmBabyMod</AssemblyName>
   </PropertyGroup>
 
-<ItemGroup>
-  <Reference Include="StardewModdingAPI.dll">
-    <HintPath>lib/StardewModdingAPI.dll</HintPath>
-  </Reference>
-  <Reference Include="Stardew Valley.dll">
-    <HintPath>lib/Stardew Valley.dll</HintPath>
-  </Reference>
-  <Reference Include="Harmony.dll">
-    <HintPath>lib/Harmony.dll</HintPath>
-  </Reference>
-</ItemGroup>
+  <ItemGroup>
+    <Reference Include="StardewModdingAPI">
+      <HintPath>lib\StardewModdingAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="StardewValley">
+      <HintPath>lib\StardewValley.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="HarmonyLib">
+      <HintPath>lib\Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
 
 </Project>
