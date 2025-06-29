@@ -12,10 +12,12 @@ namespace LoveCharmBabyMod
 
         public override void Entry(IModHelper helper)
         {
+            // Hook into input and day start events
             helper.Events.Input.ButtonPressed += OnButtonPressed;
             helper.Events.GameLoop.DayStarted += OnDayStarted;
 
-            var harmony = new Harmony(this.ModManifest.UniqueID);
+            // Apply Harmony patch
+            var harmony = new Harmony(ModManifest.UniqueID);
             harmony.Patch(
                 original: AccessTools.Method(typeof(NPC), nameof(NPC.dayUpdate)),
                 postfix: new HarmonyMethod(typeof(ModEntry), nameof(ForceBabyPostfix))
@@ -24,28 +26,35 @@ namespace LoveCharmBabyMod
 
         private void OnButtonPressed(object sender, ButtonPressedEventArgs e)
         {
+            // Ensure the game is ready and the player is free
             if (!Context.IsWorldReady || !Context.IsPlayerFree)
                 return;
 
+            // Check if the player is holding the Love Charm item
             var item = Game1.player.CurrentItem;
             if (item != null && item.ParentSheetIndex == LoveCharmItemID)
             {
                 forceBabyTonight = true;
                 Game1.showGlobalMessage("The Love Charm glows warmly...");
-                Game1.player.removeItemFromInventory(item); // Remove item
+                Game1.player.removeItemFromInventory(item); // Remove the item
             }
         }
 
         private void OnDayStarted(object sender, DayStartedEventArgs e)
         {
+            // Reset the flag at the start of each day
             forceBabyTonight = false;
         }
 
         public static void ForceBabyPostfix(NPC __instance)
         {
-            if (!forceBabyTonight) return;
+            // If the flag isn't set, skip logic
+            if (!forceBabyTonight)
+                return;
 
             var player = Game1.player;
+
+            // Check all baby conditions before prompting
             if (__instance.isMarried() &&
                 !__instance.isRoommate() &&
                 player.spouse == __instance.Name &&
@@ -57,7 +66,8 @@ namespace LoveCharmBabyMod
                     Game1.currentLocation.createYesNoResponses(),
                     "babyQuestion"
                 );
-                forceBabyTonight = false;
+
+                forceBabyTonight = false; // Reset after prompt
             }
         }
     }
