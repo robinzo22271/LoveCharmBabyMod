@@ -1,9 +1,11 @@
 {
-  "Name": "Love Charm Baby Mod",
-  "Author": "You",
-  "Version": "1.0.0",
-  "Description": "Use Magic Rock Candy to guarantee your spouse asks for a baby.",
-  "UniqueID": "you.LoveCharmBabyMod",
-  "EntryDll": "LoveCharmBabyMod.dll",
-  "MinimumApiVersion": "3.0.0"
+  "Name": "Love Charm Baby Mod",
+  "Author": "You",
+  "Version": "1.0.0",
+  "Description": "Use Magic Rock Candy to guarantee your spouse asks for a baby.",
+  "UniqueID": "you.LoveCharmBabyMod",
+  "EntryDll": "LoveCharmBabyMod.dll",
+  "MinimumApiVersion": "3.13.0",
+  "UpdateKeys": [ ],
+  "Dependencies": [ ]
 }
