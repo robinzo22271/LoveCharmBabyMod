@@ -19,13 +19,15 @@ jobs:
 
       - name: Display lib folder (debugging)
         run: dir lib
+        working-directory: LoveCharmBabyMod
 
       - name: Build the mod
         run: msbuild LoveCharmBabyMod.csproj /p:Configuration=Release
+        working-directory: LoveCharmBabyMod
 
       - name: Upload mod DLL
         uses: actions/upload-artifact@v4
         with:
           name: LoveCharmBabyMod
-          path: bin/Release/LoveCharmBabyMod.dll
+          path: LoveCharmBabyMod/bin/Release/LoveCharmBabyMod.dll
           
